@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584c2b0869048f45b79bdfd2854d58c, type: 3}
+  m_Name: B_SPECIAL
+  m_EditorClassIdentifier: 
+  actionID: 115
+  actionName: B_SPECIAL
+  Type: 1
+  frameCount: 55
+  isLoop: 0
+  loopFromFrame: 0
+  motions:
+  - startEndFrame: {x: 0, y: 0}
+    motionID: 140
+  - startEndFrame: {x: 1, y: 1}
+    motionID: 141
+  - startEndFrame: {x: 2, y: 5}
+    motionID: 142
+  - startEndFrame: {x: 6, y: 35}
+    motionID: 143
+  - startEndFrame: {x: 36, y: 45}
+    motionID: 144
+  - startEndFrame: {x: 46, y: 52}
+    motionID: 145
+  - startEndFrame: {x: 53, y: 54}
+    motionID: 146
+  status: []
+  hitboxes:
+  - startEndFrame: {x: 0, y: 5}
+    rect:
+      serializedVersion: 2
+      x: 1.5
+      y: 0.4
+      width: 3
+      height: 0.3
+    attackID: 11
+    proximity: 1
+  - startEndFrame: {x: 2, y: 7}
+    rect:
+      serializedVersion: 2
+      x: 0.6
+      y: 0
+      width: 1.2
+      height: 1
+    attackID: 11
+    proximity: 0
+  hurtboxes:
+  - startEndFrame: {x: 6, y: 54}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    useBaseRect: 1
+  pushboxes:
+  - startEndFrame: {x: 0, y: 54}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    useBaseRect: 1
+  movements:
+  - startEndFrame: {x: 0, y: 2}
+    velocity_x: 3
+  - startEndFrame: {x: 0, y: 10}
+    velocity_x: 2
+  - startEndFrame: {x: 10, y: 15}
+    velocity_x: 1
+  - startEndFrame: {x: 16, y: 16}
+    velocity_x: 0
+  cancels: []
+  alwaysCancelable: 0

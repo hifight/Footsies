@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584c2b0869048f45b79bdfd2854d58c, type: 3}
+  m_Name: STAND
+  m_EditorClassIdentifier: 
+  actionID: 0
+  actionName: STAND
+  Type: 0
+  frameCount: 24
+  motions:
+  - startEndFrame: {x: 0, y: 5}
+    motionID: 0
+  - startEndFrame: {x: 6, y: 8}
+    motionID: 1
+  - startEndFrame: {x: 9, y: 14}
+    motionID: 2
+  - startEndFrame: {x: 15, y: 20}
+    motionID: 3
+  - startEndFrame: {x: 21, y: 23}
+    motionID: 4
+  status: []
+  hitboxes: []
+  hurtboxes:
+  - startEndFrame: {x: 0, y: 59}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1.2
+    useBaseRect: 1
+  pushboxes:
+  - startEndFrame: {x: 0, y: 59}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.8
+      height: 1
+    useBaseRect: 1
+  movements: []
+  cancels: []
+  alwaysCancelable: 1

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86479bbb272da14a9b83283a239998a, type: 3}
+  m_Name: F00_AttackDataContainer
+  m_EditorClassIdentifier: Assembly-CSharp:Footsies:AttackDataContainer
+  attackDataList:
+  - attackID: 1
+    attackName: N_ATTACK
+    damageActionID: 200
+    guardActionID: 306
+    numberOfHit: 1
+    vitalHealthDamage: 0
+    guardHealthDamage: 1
+    hitStunFrame: 12
+    guardStunFrame: 12
+    guardBreakStunFrame: 30
+  - attackID: 10
+    attackName: N_SPECIAL
+    damageActionID: 500
+    guardActionID: 301
+    numberOfHit: 1
+    vitalHealthDamage: 1
+    guardHealthDamage: 1
+    hitStunFrame: 0
+    guardStunFrame: 15
+    guardBreakStunFrame: 30
+  - attackID: 2
+    attackName: B_ATTACK
+    damageActionID: 200
+    guardActionID: 305
+    numberOfHit: 1
+    vitalHealthDamage: 0
+    guardHealthDamage: 1
+    hitStunFrame: 12
+    guardStunFrame: 12
+    guardBreakStunFrame: 30
+  - attackID: 11
+    attackName: B_SPECIAL
+    damageActionID: 500
+    guardActionID: 301
+    numberOfHit: 1
+    vitalHealthDamage: 1
+    guardHealthDamage: 1
+    hitStunFrame: 0
+    guardStunFrame: 15
+    guardBreakStunFrame: 30

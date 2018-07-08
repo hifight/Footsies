@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584c2b0869048f45b79bdfd2854d58c, type: 3}
+  m_Name: N_ATTACK
+  m_EditorClassIdentifier: 
+  actionID: 100
+  actionName: N_ATTACK
+  Type: 1
+  frameCount: 22
+  isLoop: 0
+  loopFromFrame: 0
+  motions:
+  - startEndFrame: {x: 0, y: 1}
+    motionID: 50
+  - startEndFrame: {x: 2, y: 3}
+    motionID: 51
+  - startEndFrame: {x: 4, y: 15}
+    motionID: 52
+  - startEndFrame: {x: 16, y: 19}
+    motionID: 53
+  - startEndFrame: {x: 20, y: 21}
+    motionID: 54
+  status:
+  - startEndFrame: {x: 0, y: 4}
+    counterHit: 1
+  hitboxes:
+  - startEndFrame: {x: 0, y: 5}
+    rect:
+      serializedVersion: 2
+      x: 1.5
+      y: 0
+      width: 3
+      height: 0.4
+    attackID: 1
+    proximity: 1
+  - startEndFrame: {x: 4, y: 5}
+    rect:
+      serializedVersion: 2
+      x: 0.9
+      y: 0
+      width: 1.8
+      height: 0.3
+    attackID: 1
+    proximity: 0
+  hurtboxes:
+  - startEndFrame: {x: 0, y: 21}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1.2
+    useBaseRect: 1
+  - startEndFrame: {x: 4, y: 15}
+    rect:
+      serializedVersion: 2
+      x: 0.8
+      y: 0
+      width: 1.6
+      height: 0.4
+    useBaseRect: 0
+  - startEndFrame: {x: 16, y: 18}
+    rect:
+      serializedVersion: 2
+      x: 0.5
+      y: 0
+      width: 1
+      height: 0.4
+    useBaseRect: 0
+  pushboxes:
+  - startEndFrame: {x: 0, y: 21}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.8
+      height: 1
+    useBaseRect: 1
+  movements: []
+  cancels:
+  - startEndFrame: {x: 1, y: 3}
+    buffer: 1
+    execute: 0
+    actionID: 6e000000
+  - startEndFrame: {x: 4, y: 5}
+    buffer: 0
+    execute: 1
+    actionID: 6e000000
+  alwaysCancelable: 0

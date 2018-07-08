@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584c2b0869048f45b79bdfd2854d58c, type: 3}
+  m_Name: WIN
+  m_EditorClassIdentifier: 
+  actionID: 510
+  actionName: WIN
+  Type: 0
+  frameCount: 33
+  isLoop: 1
+  loopFromFrame: 5
+  motions:
+  - startEndFrame: {x: 0, y: 4}
+    motionID: 200
+  - startEndFrame: {x: 5, y: 8}
+    motionID: 201
+  - startEndFrame: {x: 9, y: 12}
+    motionID: 202
+  - startEndFrame: {x: 13, y: 16}
+    motionID: 203
+  - startEndFrame: {x: 17, y: 20}
+    motionID: 204
+  - startEndFrame: {x: 21, y: 24}
+    motionID: 205
+  - startEndFrame: {x: 25, y: 28}
+    motionID: 206
+  - startEndFrame: {x: 29, y: 32}
+    motionID: 207
+  status: []
+  hitboxes: []
+  hurtboxes:
+  - startEndFrame: {x: 0, y: 32}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    useBaseRect: 1
+  pushboxes:
+  - startEndFrame: {x: 0, y: 32}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    useBaseRect: 1
+  movements: []
+  cancels: []
+  alwaysCancelable: 0

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584c2b0869048f45b79bdfd2854d58c, type: 3}
+  m_Name: DEAD
+  m_EditorClassIdentifier: 
+  actionID: 500
+  actionName: DEAD
+  Type: 2
+  frameCount: 500
+  motions:
+  - startEndFrame: {x: 0, y: 9}
+    motionID: 80
+  - startEndFrame: {x: 10, y: 19}
+    motionID: 81
+  - startEndFrame: {x: 20, y: 29}
+    motionID: 82
+  - startEndFrame: {x: 30, y: 39}
+    motionID: 83
+  - startEndFrame: {x: 40, y: 49}
+    motionID: 84
+  - startEndFrame: {x: 50, y: 59}
+    motionID: 85
+  - startEndFrame: {x: 60, y: 69}
+    motionID: 86
+  - startEndFrame: {x: 70, y: 499}
+    motionID: 87
+  status: []
+  hitboxes: []
+  hurtboxes:
+  - startEndFrame: {x: 0, y: 20}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1.2
+    useBaseRect: 1
+  - startEndFrame: {x: 21, y: 500}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 0.5
+    useBaseRect: 0
+  pushboxes:
+  - startEndFrame: {x: 0, y: 9}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 1
+    useBaseRect: 0
+  - startEndFrame: {x: 10, y: 20}
+    rect:
+      serializedVersion: 2
+      x: -0.25
+      y: 0
+      width: 2
+      height: 1
+    useBaseRect: 0
+  - startEndFrame: {x: 21, y: 500}
+    rect:
+      serializedVersion: 2
+      x: -0.5
+      y: 0
+      width: 2.5
+      height: 0.5
+    useBaseRect: 0
+  movements:
+  - startEndFrame: {x: 0, y: 19}
+    velocity_x: -4
+  - startEndFrame: {x: 20, y: 39}
+    velocity_x: -3
+  - startEndFrame: {x: 40, y: 49}
+    velocity_x: -1
+  - startEndFrame: {x: 50, y: 50}
+    velocity_x: 0
+  cancels: []
+  alwaysCancelable: 0

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461913c0cd8d9a345b1a4f87a0789dcf, type: 3}
+  m_Name: F00
+  m_EditorClassIdentifier: 
+  startGuardHealth: 3
+  forwardMoveSpeed: 2.2
+  backwardMoveSpeed: 1.8
+  dashAllowFrame: 8
+  canCancelOnWhiff: 0
+  baseHurtBoxRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1.5
+    height: 1.2
+  basePushBoxRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1.4
+    height: 1
+  actionDataContainer: {fileID: 11400000, guid: 47b90728f65eaf14083c45c9f81c1d2b,
+    type: 2}
+  attackDataContainer: {fileID: 11400000, guid: cc93bedf254889440b8b3ffc09e2aeb0,
+    type: 2}
+  motionDataContainer: {fileID: 11400000, guid: dccf247f7ff70e5418d36c683f04534b,
+    type: 2}
