@@ -14,7 +14,7 @@ MonoBehaviour:
   actionID: 105
   actionName: B_ATTACK
   Type: 1
-  frameCount: 22
+  frameCount: 21
   isLoop: 0
   loopFromFrame: 0
   motions:
@@ -26,7 +26,7 @@ MonoBehaviour:
     motionID: 132
   - startEndFrame: {x: 16, y: 19}
     motionID: 133
-  - startEndFrame: {x: 20, y: 21}
+  - startEndFrame: {x: 20, y: 20}
     motionID: 134
   status:
   - startEndFrame: {x: 0, y: 3}
@@ -95,3 +95,4 @@ MonoBehaviour:
     execute: 1
     actionID: 6e000000
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: 15f19933973c62f408011e11283da300, type: 3}

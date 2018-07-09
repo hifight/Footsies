@@ -95,3 +95,4 @@ MonoBehaviour:
     execute: 1
     actionID: 6e000000
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: f0c0fcfce9f7a3e408d00527408a8256, type: 3}

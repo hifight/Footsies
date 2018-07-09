@@ -15,6 +15,8 @@ MonoBehaviour:
   actionName: GUARD_M
   Type: 3
   frameCount: 23
+  isLoop: 0
+  loopFromFrame: 0
   motions:
   - startEndFrame: {x: 0, y: 14}
     motionID: 101
@@ -51,3 +53,4 @@ MonoBehaviour:
     velocity_x: 0
   cancels: []
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: 48886bcf39c55324ba40754197f72f00, type: 3}

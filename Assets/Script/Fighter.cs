@@ -365,6 +365,7 @@ namespace Footsies
                 {
                     SetCurrentAction(attackData.guardActionID);
                     reserveDamageActionID = (int)CommonActionID.GUARD_BREAK;
+                    SoundManager.Instance.playFighterSE(fighterData.actions[reserveDamageActionID].audioClip, isFaceRight, position.x);
                     return DamageResult.GuardBreak;
                 }
                 else
@@ -542,6 +543,14 @@ namespace Footsies
             bufferActionID = -1;
             reserveDamageActionID = -1;
             spriteShakePosition = 0;
+
+            if(fighterData.actions[currentActionID].audioClip != null)
+            {
+                if (currentActionID == (int)CommonActionID.GUARD_BREAK)
+                    return;
+
+                SoundManager.Instance.playFighterSE(fighterData.actions[currentActionID].audioClip, isFaceRight, position.x);
+            }
         }
         
         /// <summary>

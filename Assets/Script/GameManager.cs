@@ -13,7 +13,9 @@ namespace Footsies
             Battle = 2,
         }
 
-        public SceneIndex currentScene = SceneIndex.Title;
+        public AudioClip menuSelectAudioClip;
+
+        public SceneIndex currentScene { get; private set; }
         public bool isVsCPU { get; private set; }
 
         private void Awake()
@@ -61,6 +63,11 @@ namespace Footsies
         {
             SceneManager.LoadScene((int)SceneIndex.Battle);
             currentScene = SceneIndex.Battle;
+
+            if(menuSelectAudioClip != null)
+            {
+                SoundManager.Instance.playSE(menuSelectAudioClip);
+            }
         }
     }
 

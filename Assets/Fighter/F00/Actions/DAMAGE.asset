@@ -15,6 +15,8 @@ MonoBehaviour:
   actionName: DAMAGE
   Type: 2
   frameCount: 17
+  isLoop: 0
+  loopFromFrame: 0
   motions:
   - startEndFrame: {x: 0, y: 8}
     motionID: 70
@@ -55,3 +57,4 @@ MonoBehaviour:
     velocity_x: 0
   cancels: []
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: ca8a1bf534fd4b148892e505f0b61072, type: 3}

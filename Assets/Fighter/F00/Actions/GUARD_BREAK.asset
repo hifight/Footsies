@@ -53,3 +53,4 @@ MonoBehaviour:
     velocity_x: 0
   cancels: []
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: eb8261884b999eb4face6739fe7ad161, type: 3}

@@ -15,6 +15,8 @@ MonoBehaviour:
   actionName: DASH_BACKWARD
   Type: 0
   frameCount: 22
+  isLoop: 0
+  loopFromFrame: 0
   motions:
   - startEndFrame: {x: 0, y: 10}
     motionID: 40
@@ -57,3 +59,4 @@ MonoBehaviour:
     velocity_x: 0
   cancels: []
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: a9a96b74df44d5f4fa0cdd45342ca1e1, type: 3}

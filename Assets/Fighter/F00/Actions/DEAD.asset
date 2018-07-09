@@ -15,6 +15,8 @@ MonoBehaviour:
   actionName: DEAD
   Type: 2
   frameCount: 500
+  isLoop: 0
+  loopFromFrame: 0
   motions:
   - startEndFrame: {x: 0, y: 9}
     motionID: 80
@@ -87,3 +89,4 @@ MonoBehaviour:
     velocity_x: 0
   cancels: []
   alwaysCancelable: 0
+  audioClip: {fileID: 8300000, guid: 4b0a261ce2a2f35499cd3d77d4cd679d, type: 3}
