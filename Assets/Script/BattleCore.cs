@@ -504,6 +504,22 @@ namespace Footsies
 
             return false;
         }
+
+        public int GetFrameAdvantage(bool getP1)
+        {
+            var p1FrameLeft = fighter1.currentActionFrameCount - fighter1.currentActionFrame;
+            if (fighter1.isAlwaysCancelable)
+                p1FrameLeft = 0;
+
+            var p2FrameLeft = fighter2.currentActionFrameCount - fighter2.currentActionFrame;
+            if (fighter2.isAlwaysCancelable)
+                p2FrameLeft = 0;
+
+            if (getP1)
+                return p2FrameLeft - p1FrameLeft;
+            else
+                return p1FrameLeft - p2FrameLeft;
+        }
     }
 
 }

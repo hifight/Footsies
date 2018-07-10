@@ -88,6 +88,7 @@ namespace Footsies
         public int currentActionFrame { get; private set; }
         public int currentActionFrameCount { get { return fighterData.actions[currentActionID].frameCount; } }
         private bool isActionEnd { get { return (currentActionFrame >= fighterData.actions[currentActionID].frameCount); } }
+        public bool isAlwaysCancelable { get { return fighterData.actions[currentActionID].alwaysCancelable; } }
         
         public int currentActionHitCount{ get; private set; }
 

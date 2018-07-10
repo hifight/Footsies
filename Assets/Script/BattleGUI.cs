@@ -103,13 +103,10 @@ namespace Footsies
             if (drawDebug)
             {
                 battleCore.fighters.ForEach((f) => DrawFighter(f));
-
-                if (battleCore.isDebugPause)
-                {
-                    var labelRect = new Rect(Screen.width * 0.4f, Screen.height * 0.95f, Screen.width * 0.2f, Screen.height * 0.05f);
-                    debugTextStyle.alignment = TextAnchor.UpperCenter;
-                    GUI.Label(labelRect, "Debug Pause (F1=Resume, F2=Play 1 Frame)", debugTextStyle);
-                }
+                
+                var labelRect = new Rect(Screen.width * 0.4f, Screen.height * 0.95f, Screen.width * 0.2f, Screen.height * 0.05f);
+                debugTextStyle.alignment = TextAnchor.UpperCenter;
+                GUI.Label(labelRect, "F1=Pause/Resume, F2=Frame Step, F12=Debug Draw", debugTextStyle);
 
                 //DrawBox(new Rect(battleAreaTopLeftPoint.x,
                 //    battleAreaTopLeftPoint.y,
@@ -162,7 +159,10 @@ namespace Footsies
             GUI.Label(labelRect, fighter.position.ToString(), debugTextStyle);
 
             labelRect.y += Screen.height * 0.03f;
-            GUI.Label(labelRect, "Frame: " + fighter.currentActionFrame + "/" + fighter.currentActionFrameCount, debugTextStyle);
+            var frameAdvantage = battleCore.GetFrameAdvantage(fighter.isFaceRight);
+            var frameAdvText = frameAdvantage > 0 ? "+" + frameAdvantage : frameAdvantage.ToString();
+            GUI.Label(labelRect, "Frame: " + fighter.currentActionFrame + "/" + fighter.currentActionFrameCount 
+                + "(" + frameAdvText + ")", debugTextStyle);
 
             labelRect.y += Screen.height * 0.03f;
             GUI.Label(labelRect, "Stun: " + fighter.currentHitStunFrame, debugTextStyle);

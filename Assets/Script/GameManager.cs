@@ -34,7 +34,7 @@ namespace Footsies
         {
             if(currentScene == SceneIndex.Battle)
             {
-                if(Input.GetKeyDown(KeyCode.Escape))
+                if(Input.GetButtonDown("Cancel"))
                 {
                     LoadTitleScene();
                 }

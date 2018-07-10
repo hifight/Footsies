@@ -210,17 +210,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114942961466650480, guid: ac8378dd394a0af4b946774d38e9710a,
-        type: 2}
-      propertyPath: _battleCoreGameObject
-      value: 
-      objectReference: {fileID: 1856329100}
-    - target: {fileID: 114835973850273970, guid: ac8378dd394a0af4b946774d38e9710a,
-        type: 2}
-      propertyPath: _battleCoreGameObject
-      value: 
-      objectReference: {fileID: 1856329100}
-    - target: {fileID: 114725171267258580, guid: ac8378dd394a0af4b946774d38e9710a,
+    - target: {fileID: 114145311754467714, guid: ac8378dd394a0af4b946774d38e9710a,
         type: 2}
       propertyPath: _battleCoreGameObject
       value: 
@@ -230,7 +220,17 @@ Prefab:
       propertyPath: _battleCoreGameObject
       value: 
       objectReference: {fileID: 1856329100}
-    - target: {fileID: 114145311754467714, guid: ac8378dd394a0af4b946774d38e9710a,
+    - target: {fileID: 114725171267258580, guid: ac8378dd394a0af4b946774d38e9710a,
+        type: 2}
+      propertyPath: _battleCoreGameObject
+      value: 
+      objectReference: {fileID: 1856329100}
+    - target: {fileID: 114835973850273970, guid: ac8378dd394a0af4b946774d38e9710a,
+        type: 2}
+      propertyPath: _battleCoreGameObject
+      value: 
+      objectReference: {fileID: 1856329100}
+    - target: {fileID: 114942961466650480, guid: ac8378dd394a0af4b946774d38e9710a,
         type: 2}
       propertyPath: _battleCoreGameObject
       value: 
