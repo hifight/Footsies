@@ -14,7 +14,8 @@ MonoBehaviour:
   startGuardHealth: 3
   forwardMoveSpeed: 2.2
   backwardMoveSpeed: 1.8
-  dashAllowFrame: 8
+  dashAllowFrame: 9
+  specialAttackHoldFrame: 60
   canCancelOnWhiff: 0
   baseHurtBoxRect:
     serializedVersion: 2

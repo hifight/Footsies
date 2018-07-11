@@ -99,7 +99,7 @@ namespace Footsies
             }
             else if (fightState.distanceX > 2f)
             {
-                var rand = Random.Range(0, 3);
+                var rand = Random.Range(0, 4);
                 if (rand == 0)
                     AddFallBack1();
                 else if (rand == 1)
@@ -109,11 +109,13 @@ namespace Footsies
             }
             else
             {
-                var rand = Random.Range(0, 2);
+                var rand = Random.Range(0, 3);
                 if (rand == 0)
                     AddFallBack1();
-                else
+                else if (rand == 1)
                     AddFallBack2();
+                else
+                    AddNeutralMovement();
             }
         }
 

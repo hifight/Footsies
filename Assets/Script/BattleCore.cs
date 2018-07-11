@@ -292,9 +292,9 @@ namespace Footsies
             var time = Time.fixedTime - roundStartTime;
 
             InputData p1Input = new InputData();
-            p1Input.input |= Input.GetButton("P1_Left") ? (int)InputDefine.Left : 0;
-            p1Input.input |= Input.GetButton("P1_Right") ? (int)InputDefine.Right : 0;
-            p1Input.input |= Input.GetButton("P1_Attack") ? (int)InputDefine.Attack : 0;
+            p1Input.input |= InputManager.Instance.GetButton(InputManager.Command.p1Left) ? (int)InputDefine.Left : 0;
+            p1Input.input |= InputManager.Instance.GetButton(InputManager.Command.p1Right) ? (int)InputDefine.Right : 0;
+            p1Input.input |= InputManager.Instance.GetButton(InputManager.Command.p1Attack) ? (int)InputDefine.Attack : 0;
             p1Input.time = time;
 
             if (debugP1Attack)
@@ -322,9 +322,9 @@ namespace Footsies
             }
             else
             {
-                p2Input.input |= Input.GetButton("P2_Left") ? (int)InputDefine.Left : 0;
-                p2Input.input |= Input.GetButton("P2_Right") ? (int)InputDefine.Right : 0;
-                p2Input.input |= Input.GetButton("P2_Attack") ? (int)InputDefine.Attack : 0;
+                p2Input.input |= InputManager.Instance.GetButton(InputManager.Command.p2Left) ? (int)InputDefine.Left : 0;
+                p2Input.input |= InputManager.Instance.GetButton(InputManager.Command.p2Right) ? (int)InputDefine.Right : 0;
+                p2Input.input |= InputManager.Instance.GetButton(InputManager.Command.p2Attack) ? (int)InputDefine.Attack : 0;
             }
 
             p2Input.time = time;

@@ -19,6 +19,9 @@ namespace Footsies
         private AudioSource seSource2;
         private AudioSource bgmSource;
 
+        private float defaultBGMVolume;
+        public bool isBGMOn { get; private set; }
+
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -26,6 +29,8 @@ namespace Footsies
             seSource1 = seSourceObject1.GetComponent<AudioSource>();
             seSource2 = seSourceObject2.GetComponent<AudioSource>();
             bgmSource = bgmSourceObject.GetComponent<AudioSource>();
+            defaultBGMVolume = bgmSource.volume;
+            isBGMOn = true;
         }
 
         // Update is called once per frame
@@ -33,6 +38,23 @@ namespace Footsies
         {
 
         }
+
+        public bool toggleBGM()
+        {
+            if (isBGMOn)
+            {
+                bgmSource.volume = 0;
+                isBGMOn = false;
+            }
+            else
+            {
+                bgmSource.volume = defaultBGMVolume;
+                isBGMOn = true;
+            }
+
+            return isBGMOn;
+        }
+
 
         public void playSE(AudioClip clip)
         {

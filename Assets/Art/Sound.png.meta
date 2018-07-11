@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: 9c5b1e6b3169c6d4e94dd07fa08dfcce
+guid: ba3afa4c3018c56428fb7d0631180378
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Menu_0
-    21300002: Menu_1
-    21300004: Menu_2
-    21300006: Menu_3
-    21300008: Menu_4
+    21300000: Sound_0
+    21300002: Sound_1
+    21300004: Sound_2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -50,7 +48,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -87,32 +85,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 22
-        width: 50
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9533c61be12434479be3b9a48e58a9f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_1
+      name: Sound_0
       rect:
         serializedVersion: 2
         x: 0
         y: 11
-        width: 50
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,18 +99,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21fad107b3e2dd74ab787efda6a59d13
+      spriteID: fed0e2803765e1542923617da4f34432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_2
+      name: Sound_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
+        x: 11
+        y: 11
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,7 +119,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ea498facbc3895409cc6206565a07f7
+      spriteID: 7ff55243bb859584586e247fad3bf418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sound_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d632e3779e90e1c41b82ca57b2c2a8b2
       vertices: []
       indices: 
       edges: []
@@ -149,7 +147,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 122d62a2b29a80c4ca9ca33d3f6e5633
+    spriteID: 7915c284e6567b648908d7888de0bd46
     vertices: []
     indices: 
     edges: []

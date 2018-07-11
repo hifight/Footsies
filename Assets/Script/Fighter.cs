@@ -225,7 +225,7 @@ namespace Footsies
             bool isAttack = IsAttackInput(inputDown[0]);
             if (CheckSpecialAttackInput())
             {
-                if (isBackward)
+                if (isBackward || isForward)
                     RequestAction((int)CommonActionID.B_SPECIAL);
                 else
                     RequestAction((int)CommonActionID.N_SPECIAL);
@@ -238,7 +238,7 @@ namespace Footsies
                     RequestAction((int)CommonActionID.N_SPECIAL);
                 else
                 {
-                    if(isBackward)
+                    if(isBackward || isForward)
                         RequestAction((int)CommonActionID.B_ATTACK);
                     else
                         RequestAction((int)CommonActionID.N_ATTACK);
