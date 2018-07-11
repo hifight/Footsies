@@ -6,7 +6,7 @@ While the controls (and graphics) are super simple,
 FOOTSIES retains the fundamental feeling of fighting game genre 
 where spacing, hit confirming and whiff punishing are keys to achieve victory.
 
-<img class="row-picture" src="https://hifight.github.io/static/img/footsies/footsies_01.jpg">
+<img class="row-picture" src="https://hifight.github.io/static/img/footsies/footsies_00.jpg">
 
 This is a fun little project where I decided to create everything on the game myself,
 even though I am super bad art and music, it went really well with how simple the gameplay is. 
