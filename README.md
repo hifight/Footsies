@@ -1,25 +1,26 @@
 # Footsies
 
 FOOTSIES is a 2D fighting game where players can control character movement horizontally 
-and use one attack button to perform normal and special moves.
+and use one attack button to perform normal and special moves to defeat their opponent.
 While the controls (and graphics) are super simple, 
 FOOTSIES retains the fundamental feeling of fighting game genre 
-where spacing, hit confirming and whiff punishing are keys to achieve victory.
+where spacing, hit confirm and whiff punish are keys to achieve victory.
 
 <img class="row-picture" src="https://hifight.github.io/static/img/footsies/footsies_00.jpg">
 
-This is a fun little project where I decided to create everything on the game myself,
-even though I am super bad art and music, it went really well with how simple the gameplay is. 
+This is a fun little project for the fighting game community and 
+for own practice developing a game by myself.
+I am objectively bad at art and music but that went kinda well with theme of the game. 
 The animation in this game are, obviously, heavily inspired by the most iconic you-know-who fighting game character.
 
-Although I mostly tested this game with CPU, when I actually tried this game with my friend, 
-we actually had a lot of fun! So, I hope that everyone can this game and have some fun as well :D
+Although I only tested this game mostly with CPU, when I actually tried this game with my friend, 
+we actually had a lot of fun! So, I hope that everyone try this game and have some fun as well :D
 
 <img class="row-picture" src="https://hifight.github.io/static/img/footsies/footsies_01.jpg">
 
 <h3>Download</h3> 
 
-<b><u><a href="https://github.com/hifight/Footsies/raw/master/FOOTSIES_20180711.zip" download>FOOTSIES</a></u></b>
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.0/FOOTSIES_20180711.zip" download>FOOTSIES</a></u></b>
 
 ※You can config keys/buttons input when the game is launched, although XInput can't be set on config windows, 
 XInput controller should work fine in the game.
