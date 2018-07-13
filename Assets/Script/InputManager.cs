@@ -40,7 +40,7 @@ namespace Footsies
         private int currentMenuInput = 0;
 
         private float stickThreshold = 0.01f;
-
+        
         private void Awake()
         {
             DontDestroyOnLoad(this.gameObject);
@@ -78,7 +78,9 @@ namespace Footsies
                             {
                                 var changedSelectable = IsMenuInputDown(PadMenuInputState.Up) ? selectable.FindSelectableOnUp() : selectable.FindSelectableOnDown();
                                 if (changedSelectable != null)
+                                {
                                     changedSelectable.Select();
+                                }
                             }
                         }
                     }

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace Footsies
 {
-    public class UIEventAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class UIEventAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
     {
         public enum Action
         {
@@ -78,6 +78,11 @@ namespace Footsies
         }
         
         public void OnPointerEnter(PointerEventData eventData)
+        {
+            EventSystem.current.SetSelectedGameObject(gameObject);
+        }
+        
+        public void OnPointerDown(PointerEventData eventData)
         {
             EventSystem.current.SetSelectedGameObject(gameObject);
         }
