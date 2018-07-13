@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Footsies
 {
-    public class UIEventAction : MonoBehaviour
+    public class UIEventAction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         public enum Action
         {
@@ -74,6 +75,15 @@ namespace Footsies
             {
                 toggle.isOn = isOn;
             }
+        }
+        
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            EventSystem.current.SetSelectedGameObject(gameObject);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
         }
     }
 

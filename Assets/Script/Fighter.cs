@@ -588,7 +588,7 @@ namespace Footsies
 
                 if (IsForwardInput(input[i]))
                 {
-                    for(int j = i + 1; j < i + 5; j++)
+                    for(int j = i + 1; j < i + fighterData.dashAllowFrame; j++)
                     {
                         if (!IsForwardInput(input[j]) && !IsBackwardInput(input[j]))
                             return true;
@@ -614,7 +614,7 @@ namespace Footsies
 
                 if (IsBackwardInput(input[i]))
                 {
-                    for (int j = i + 1; j < i + 5; j++)
+                    for (int j = i + 1; j < i + fighterData.dashAllowFrame; j++)
                     {
                         if (!IsForwardInput(input[j]) && !IsBackwardInput(input[j]))
                             return true;

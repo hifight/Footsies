@@ -45,9 +45,9 @@ MonoBehaviour:
     rect:
       serializedVersion: 2
       x: 0.8
-      y: 0.55
+      y: 0
       width: 1.6
-      height: 0.3
+      height: 0.9
     attackID: 2
     proximity: 0
   hurtboxes:

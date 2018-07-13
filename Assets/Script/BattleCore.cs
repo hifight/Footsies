@@ -78,6 +78,11 @@ namespace Footsies
 
         public bool isDebugPause { get; private set; }
 
+        private float introStateTime = 3f;
+        private float koStateTime = 2f;
+        private float endStateTime = 3f;
+        private float endStateSkippableTime = 1.5f;
+
         void Awake()
         {
             // Setup dictionary from ScriptableObject data
@@ -156,7 +161,8 @@ namespace Footsies
 
                     UpdateEndState();
                     timer -= Time.deltaTime;
-                    if (timer <= 0f)
+                    if (timer <= 0f
+                        || (timer <= endStateSkippableTime && IsKOSkipButtonPressed()))
                     {
                         ChangeRoundState(RoundStateType.Stop);
                     }
@@ -184,7 +190,7 @@ namespace Footsies
                     fighter1.SetupBattleStart(fighterDataList[0], new Vector2(-2f, 0f), true);
                     fighter2.SetupBattleStart(fighterDataList[0], new Vector2(2f, 0f), false);
 
-                    timer = 3.0f;
+                    timer = introStateTime;
 
                     roundUIAnimator.SetTrigger("RoundStart");
                     
@@ -202,7 +208,7 @@ namespace Footsies
                     break;
                 case RoundStateType.KO:
 
-                    timer = 3.0f;
+                    timer = koStateTime;
 
                     CopyLastRoundInput();
 
@@ -216,7 +222,7 @@ namespace Footsies
                     break;
                 case RoundStateType.End:
 
-                    timer = 3.0f;
+                    timer = endStateTime;
 
                     var deadFighter = _fighters.FindAll((f) => f.isDead);
                     if (deadFighter.Count == 1)
@@ -335,6 +341,17 @@ namespace Footsies
                 p2Input.input |= (int)InputDefine.Right;
 
             return p2Input;
+        }
+
+        private bool IsKOSkipButtonPressed()
+        {
+            if (InputManager.Instance.GetButton(InputManager.Command.p1Attack))
+                return true;
+
+            if (InputManager.Instance.GetButton(InputManager.Command.p2Attack))
+                return true;
+
+            return false;
         }
         
         void UpdatePushCharacterVsCharacter()

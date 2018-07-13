@@ -36,8 +36,10 @@ namespace Footsies
 
         public GamePadHelper[] gamePads = new GamePadHelper[2];
 
-        int previousMenuInput = 0;
-        int currentMenuInput = 0;
+        private int previousMenuInput = 0;
+        private int currentMenuInput = 0;
+
+        private float stickThreshold = 0.01f;
 
         private void Awake()
         {
@@ -89,12 +91,12 @@ namespace Footsies
             if(IsPadConnected(0))
             {
                 if (command == Command.p1Left
-                    && gamePads[0].state.DPad.Left == ButtonState.Pressed)
+                    && IsXInputLeft(gamePads[0].state))
                 {
                     return true;
                 }
                 else if (command == Command.p1Right
-                    && gamePads[0].state.DPad.Right == ButtonState.Pressed)
+                    && IsXInputRight(gamePads[0].state))
                 {
                     return true;
                 }
@@ -108,12 +110,12 @@ namespace Footsies
             if (IsPadConnected(1))
             {
                 if (command == Command.p2Left
-                    && gamePads[1].state.DPad.Left == ButtonState.Pressed)
+                    && IsXInputLeft(gamePads[1].state))
                 {
                     return true;
                 }
                 else if (command == Command.p2Right
-                    && gamePads[1].state.DPad.Right == ButtonState.Pressed)
+                    && IsXInputRight(gamePads[1].state))
                 {
                     return true;
                 }
@@ -191,9 +193,9 @@ namespace Footsies
             var state = pad.state;
 
             int i = 0;
-            if (state.DPad.Up == ButtonState.Pressed)
+            if (IsXInputUp(state))
                 i |= 1 << (int)PadMenuInputState.Up;
-            if (state.DPad.Down == ButtonState.Pressed)
+            if (IsXInputDown(state))
                 i |= 1 << (int)PadMenuInputState.Down;
             if (state.Buttons.A == ButtonState.Pressed)
                 i |= 1 << (int)PadMenuInputState.Confirm;
@@ -239,6 +241,50 @@ namespace Footsies
             }
             
             return "";
+        }
+
+        private bool IsXInputUp(GamePadState state)
+        {
+            if (state.DPad.Up == ButtonState.Pressed)
+                return true;
+
+            if (state.ThumbSticks.Left.Y > stickThreshold)
+                return true;
+
+            return false;
+        }
+
+        private bool IsXInputDown(GamePadState state)
+        {
+            if (state.DPad.Down == ButtonState.Pressed)
+                return true;
+
+            if (state.ThumbSticks.Left.Y < -stickThreshold)
+                return true;
+
+            return false;
+        }
+
+        private bool IsXInputLeft(GamePadState state)
+        {
+            if (state.DPad.Left == ButtonState.Pressed)
+                return true;
+
+            if (state.ThumbSticks.Left.X < -stickThreshold)
+                return true;
+
+            return false;
+        }
+
+        private bool IsXInputRight(GamePadState state)
+        {
+            if (state.DPad.Right == ButtonState.Pressed)
+                return true;
+
+            if (state.ThumbSticks.Left.X > stickThreshold)
+                return true;
+
+            return false;
         }
     }
 }
