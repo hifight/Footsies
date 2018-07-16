@@ -14,18 +14,18 @@ MonoBehaviour:
   actionID: 310
   actionName: GUARD_BREAK
   Type: 2
-  frameCount: 35
+  frameCount: 36
   isLoop: 0
   loopFromFrame: 0
   motions:
   - startEndFrame: {x: 0, y: 30}
     motionID: 120
-  - startEndFrame: {x: 31, y: 34}
+  - startEndFrame: {x: 31, y: 35}
     motionID: 121
   status: []
   hitboxes: []
   hurtboxes:
-  - startEndFrame: {x: 0, y: 34}
+  - startEndFrame: {x: 0, y: 35}
     rect:
       serializedVersion: 2
       x: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
       height: 1.2
     useBaseRect: 0
   pushboxes:
-  - startEndFrame: {x: 0, y: 34}
+  - startEndFrame: {x: 0, y: 35}
     rect:
       serializedVersion: 2
       x: 0

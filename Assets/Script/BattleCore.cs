@@ -134,11 +134,8 @@ namespace Footsies
                     }
 
                     frameCount++;
-
-                    var p1Input = GetP1InputData();
-                    var p2Input = GetP2InputData();
-                    RecordInput(p1Input, p2Input);
-                    UpdateFightState(p1Input, p2Input);
+                    
+                    UpdateFightState();
 
                     var deadFighter = _fighters.Find((f) => f.isDead);
                     if(deadFighter != null)
@@ -193,7 +190,10 @@ namespace Footsies
                     timer = introStateTime;
 
                     roundUIAnimator.SetTrigger("RoundStart");
-                    
+
+                    if (GameManager.Instance.isVsCPU)
+                        battleAI = new BattleAI(this);
+
                     break;
                 case RoundStateType.Fight:
 
@@ -201,9 +201,6 @@ namespace Footsies
                     frameCount = -1;
 
                     currentRecordingInputIndex = 0;
-
-                    if (GameManager.Instance.isVsCPU)
-                        battleAI = new BattleAI(this);
                     
                     break;
                 case RoundStateType.KO:
@@ -245,9 +242,15 @@ namespace Footsies
 
         void UpdateIntroState()
         {
+            var p1Input = GetP1InputData();
+            var p2Input = GetP2InputData();
+            RecordInput(p1Input, p2Input);
+            fighter1.UpdateInput(p1Input);
+            fighter2.UpdateInput(p2Input);
+
             _fighters.ForEach((f) => f.IncrementActionFrame());
-            
-            _fighters.ForEach((f) => f.UpdateAction());
+
+            _fighters.ForEach((f) => f.UpdateIntroAction());
             _fighters.ForEach((f) => f.UpdateMovement());
             _fighters.ForEach((f) => f.UpdateBoxes());
 
@@ -255,14 +258,17 @@ namespace Footsies
             UpdatePushCharacterVsBackground();
         }
 
-        void UpdateFightState(InputData p1Input, InputData p2Input)
+        void UpdateFightState()
         {
+            var p1Input = GetP1InputData();
+            var p2Input = GetP2InputData();
+            RecordInput(p1Input, p2Input);
             fighter1.UpdateInput(p1Input);
             fighter2.UpdateInput(p2Input);
 
             _fighters.ForEach((f) => f.IncrementActionFrame());
 
-            _fighters.ForEach((f) => f.UpdateAction());
+            _fighters.ForEach((f) => f.UpdateActionRequest());
             _fighters.ForEach((f) => f.UpdateMovement());
             _fighters.ForEach((f) => f.UpdateBoxes());
 
@@ -280,7 +286,7 @@ namespace Footsies
         {
             _fighters.ForEach((f) => f.IncrementActionFrame());
 
-            _fighters.ForEach((f) => f.UpdateAction());
+            _fighters.ForEach((f) => f.UpdateActionRequest());
             _fighters.ForEach((f) => f.UpdateMovement());
             _fighters.ForEach((f) => f.UpdateBoxes());
 

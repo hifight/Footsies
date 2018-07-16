@@ -188,9 +188,17 @@ namespace Footsies
         }
 
         /// <summary>
+        /// Action request for intro state ()
+        /// </summary>
+        public void UpdateIntroAction()
+        {
+            RequestAction((int)CommonActionID.STAND);
+        }
+
+        /// <summary>
         /// Update action request
         /// </summary>
-        public void UpdateAction()
+        public void UpdateActionRequest()
         {
             // If won then just request win animation
             if(hasWon)
